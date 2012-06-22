@@ -71,6 +71,7 @@ int main(int argc, const char *argv[])
   // create two people joe and frank
   struct Person *joe = Person_create(
     "Joe Alex", 32, 64, 140);
+
   struct Person *frank = Person_create(
       "Frank Blank", 20, 72, 180);
 

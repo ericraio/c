@@ -12,8 +12,10 @@ int main(int argc, const char *argv[])
   for (i = 0; argv[1][i] != '\0'; i++) {
     char letter = argv[1][i];
 
+    // switch statements are damn fast
     switch(letter) {
       case 'a':
+        // fallsthrough
       case 'A':
         printf("%d: 'A'\n", i);
         break;
@@ -46,6 +48,7 @@ int main(int argc, const char *argv[])
         }
         break;
 
+      // default is similar to else in an if condition
       default:
         printf("%d: %c is not a vowel\n", i, letter);
 
