@@ -16,17 +16,17 @@ struct Person {
 };
 
 // I need a way to create these structures so I have made a function to do that.
-// Here is the importanting things this function is doing.
+// Here is the important things this function is doing.
 struct Person *Person_create(char *name, int age, int height, int weight)
 {
   // I use malloc for memory allocate to ask the OS to give me a piece of raw memory.
-  // I pass to malloc the sizeof(struct Person) which calculates the total size of the struct,
+  // I pass to malloc the sizeof(struct Person) which calculates the total size of the struct in bytes,
   // given all the fields inside it
   struct Person *who = malloc(sizeof(struct Person));
   // I use assert to make sure that I have a valid piece of memory back
   // from malloc. There is a special constant called NULL that you use to
   // mean "unset or invalid pointer". This assert is basically checking that
-  // malloc didn't return a NULL incalid pointer.
+  // malloc didn't return a NULL invalid pointer.
   assert(who != NULL);
 
   // I initialize each field of struct Person using the x->y syntax, to
@@ -44,7 +44,7 @@ struct Person *Person_create(char *name, int age, int height, int weight)
 
 // If I have a create then I always need a destroy function,
 // and this is what destroys Person structs, I again use assert to
-// make sure i am not getting bad input. The I use the function free to return the memory I got with malloc and strdup. If you don't do this
+// make sure i am not getting bad input. Then I use the function free to return the memory I got with malloc and strdup. If you don't do this
 // you get a "memory leak".
 void Person_destroy(struct Person *who)
 {
@@ -54,7 +54,7 @@ void Person_destroy(struct Person *who)
   free(who);
 }
 
-// I then need a way to print out people, which is all this function does. it uss the same x->y syntax to get the field
+// I then need a way to print out people, which is all this function does. it uses the same x->y syntax to get the field
 // from the struct to print it.
 void Person_print(struct Person *who)
 {
@@ -88,12 +88,12 @@ int main(int argc, const char *argv[])
   // make everyone age 20 years and print them again
   joe->age += 20;
   joe->height -= 2;
-  joe->weight =+ 40;
+  joe->weight += 40;
   // Print each after aging them
   Person_print(joe);
 
   frank->age += 20;
-  frank->weight =+ 40;
+  frank->weight += 40;
   Person_print(frank);
 
   // destroy them both so we clean up

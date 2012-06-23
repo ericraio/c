@@ -11,7 +11,11 @@ int main(int argc, const char *argv[])
   // set up i integer var
   int i;
   // point oul pointer to the first element of the array
-  ptr = &my_array[0];
+  ptr = &my_array[1];
+
+  printf("%i\n", ptr);
+  printf("%i\n", my_array+1);
+  
 
   printf("\n\n");
 
