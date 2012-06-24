@@ -188,6 +188,10 @@ void Database_delete(struct Connection *conn, int id)
   conn->db->rows[id] = addr;
 }
 
+void Database_find()
+{
+}
+
 void Database_list(struct Connection *conn)
 {
   int i = 0;
