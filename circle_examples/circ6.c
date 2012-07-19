@@ -1,12 +1,4 @@
-/*
-    CIRCLE 6
-    Written by Amarillion (amarillion@yahoo.com)
 
-    This program demonstrates how you can draw a circle without using
-    sin or cos. It draws a number of circles on the screen. Circles
-    drawn by the function in this example are white, while circles
-    drawn by Allegro's circle function are red.
-*/
 
 #include <allegro.h>
 
